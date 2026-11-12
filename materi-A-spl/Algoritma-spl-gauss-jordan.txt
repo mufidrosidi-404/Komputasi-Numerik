@@ -1,0 +1,53 @@
+ALGORITMA MENYELESAIKAN SPL 3 VARIABEL (METODE GAUSS-JORDAN + PIVOT PARSIAL)
+Nama   : Mufid Rosidi
+NIM    : 202511420044
+Materi : Komputasi Numerik - Sistem Persamaan Linear (SPL) 3 variabel
+ 
+ALASAN MEMILIH METODE
+Aku pilih Gauss-Jordan karena hasil akhirnya langsung terbaca di kolom terakhir tanpa perlu
+substitusi mundur, dan alurnya cuma satu pola yang diulang tiap kolom sehingga kodenya lebih
+mudah dijelaskan. Untuk 3 variabel, tambahan hitungannya dibanding eliminasi Gauss biasa masih
+kecil. Aku tambahkan "pivot parsial" (memilih angka terbesar di kolom sebagai pivot) supaya
+hitungannya lebih stabil dan tidak macet kalau ada pivot bernilai 0.
+ 
+ISTILAH YANG KUPAKAI
+- papan  : matriks gabungan [A | b], yaitu koefisien dan ruas kanan dalam satu tabel
+- pivot  : angka acuan di diagonal yang dipakai untuk membersihkan satu kolom
+ 
+MASUKAN
+- koefisien_a  : matriks 3x3 berisi koefisien tiga persamaan
+- ruas_kanan_b : tiga angka di sebelah kanan tanda sama dengan
+ 
+KELUARAN
+- tiga nilai variabel (p, q, r), atau pesan bahwa SPL tidak punya solusi tunggal
+ 
+LANGKAH-LANGKAH
+1.  Gabungkan koefisien dan ruas kanan menjadi papan berukuran 3 baris x 4 kolom.
+2.  Mulai dari kolom ke-1 (sebut nomor kolom = k).
+3.  Di kolom k, dari baris k sampai baris terakhir, cari baris yang nilai mutlaknya paling
+    besar. Baris itu jadi calon pivot.
+4.  Kalau nilai calon pivot hampir nol (|nilai| < 0,000000000001), berhenti dan tulis:
+    "SPL tidak punya solusi tunggal".
+5.  Kalau calon pivot belum berada di baris k, tukar posisi dua baris itu.
+6.  Bagi seluruh isi baris k dengan nilai pivot, sehingga pivot menjadi 1.
+7.  Untuk setiap baris lain (yang di atas maupun di bawah baris k):
+      a. catat angka baris itu di kolom k, sebut faktor,
+      b. kurangi seluruh isi baris itu dengan faktor x baris k.
+    Akibatnya kolom k berisi 0 di semua baris kecuali baris k.
+8.  Naikkan k satu angka. Ulangi langkah 3 sampai 7 sampai k melewati 3.
+9.  Sekarang bagian koefisien di papan sudah berbentuk matriks identitas. Kolom terakhir
+    langsung menjadi jawaban: baris 1 = p, baris 2 = q, baris 3 = r.
+10. Periksa jawaban: hitung ruas kiri tiap persamaan memakai jawaban, lalu bandingkan dengan
+    ruas kanan. Kalau selisihnya mendekati 0, jawaban benar.
+ 
+CONTOH SOAL YANG KUPAKAI (angka kususun sendiri)
+    3p + 5q - 2r = -17
+    6p -  q + 4r =  55
+   -2p + 7q + 3r =  -8
+Hasil: p = 4, q = -3, r = 7.
+ 
+CATATAN KASUS KHUSUS
+- Kalau ada dua persamaan yang "kembar" (satu kelipatan yang lain), pivot akan jadi nol di
+  salah satu kolom dan program berhenti dengan pesan galat (lihat Cell 8 di notebook).
+- Kalau jumlah variabelnya bukan 3, langkah-langkah ini tetap berlaku, tinggal menyesuaikan
+  banyaknya kolom.
