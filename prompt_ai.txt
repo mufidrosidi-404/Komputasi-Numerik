@@ -1,0 +1,124 @@
+LOG PROMPT AI - TUGAS KOMPUTASI NUMERIK
+Nama   : Mufid Rosidi
+NIM    : 202511420044
+Tugas  : Portofolio GitHub, Google Colab, LinkedIn, dan video penjelasan
+         (Materi A: SPL 3 variabel, Materi B: Persamaan Non Linear metode Bisection)
+Alat AI: Claude (Anthropic), lewat percakapan chat
+ 
+Catatan penulisan
+Isi di bawah adalah prompt-prompt yang kupakai selama mengerjakan tugas ini, kutulis ulang
+dengan kata-kataku sendiri supaya ringkas. Maksud dan isi permintaannya sama dengan yang
+benar-benar kutanyakan. Tiap entri kuberi keterangan hasil apa yang kudapat dan apa yang
+kukerjakan sendiri sesudahnya.
+ 
+======================================================================
+PROMPT 1 - Pembuka dan Tahap 1 (akun, repo, links.txt)
+======================================================================
+Tujuan : Minta dipandu dari awal sampai script video, per tahap.
+ 
+Isi prompt (ditulis ulang):
+  "Mulai sekarang kamu jadi asisten belajarku untuk mata kuliah Komputasi Numerik. Aku
+  mahasiswa dan sedang dapat tugas dari dosen. Tolong dampingi aku dari awal sampai script
+  video, tapi dikerjakan bertahap: selesaikan satu tahap, lalu tunggu aku mengetik 'lanjut'
+  baru pindah ke tahap berikutnya.
+ 
+  Gambaran tugasnya:
+  - Aku harus punya akun GitHub, Google Colab, dan LinkedIn, lalu membuat repository
+    bernama 'Komputasi Numerik'. Link ketiga akun itu disimpan di sebuah file .txt di repo.
+  - Ada dua materi: (A) Sistem Persamaan Linear 3 variabel dan (B) Persamaan Non Linear
+    dengan metode Bisection. Untuk masing-masing aku perlu membuat algoritma, kode Python di
+    Google Colab yang tertata per cell dan bisa dijalankan per cell, versi kode yang
+    penjelasannya detail, dan video penjelasan.
+  - Semua prompt AI yang kupakai harus disimpan di file .txt di repo.
+  - Videonya maksimal 5 menit berformat .mp4, minimal 15 detik menampilkan wajah dan suara,
+    selebihnya boleh slide atau tampilan kode Colab dengan suara saja.
+  - Link repo dipasang di LinkedIn sebagai portofolio.
+ 
+  Aturan yang harus kamu ikuti:
+  1. Kalau algoritma, kode, atau prompt mirip 80% dengan milik orang lain, nilainya jadi
+     minimal. Jadi hasilnya harus orisinal: gaya penulisan algoritma sendiri, nama variabel
+     dan fungsi yang tidak umum, contoh soal dengan angka yang kususun sendiri, dan struktur
+     cell yang tidak seperti template umum.
+  2. Pakai bahasa Indonesia yang santai tapi jelas, seperti mahasiswa yang menjelaskan
+     sendiri.
+  3. Setiap kode harus bisa benar-benar dijalankan, lengkap dengan contoh input dan
+     outputnya.
+ 
+  Rencana tahapnya: (1) panduan akun dan repo, (2) materi A, (3) materi B, (4) isi file log
+  prompt, (5) script video berdurasi maksimal 5 menit dengan tabel menit, tampilan layar,
+  dan narasi, (6) urutan upload ke repo, saran commit bertahap, dan cara memasang link repo
+  di LinkedIn. Mulai dari tahap 1: checklist membuat akun dan repo, isi file links.txt
+  beserta template-nya, dan kapan link repo dipasang di LinkedIn."
+ 
+Hasil yang kudapat:
+  Checklist pembuatan akun GitHub, Colab, LinkedIn; langkah membuat repo (nama repo memakai
+  tanda hubung karena GitHub tidak menerima spasi); template links.txt; saran memasang link
+  repo di LinkedIn setelah semua isi repo siap.
+ 
+Yang kukerjakan sendiri:
+  (isi: misalnya "membuat akun dan repo sendiri, mengisi links.txt dengan link asliku")
+ 
+======================================================================
+PROMPT 2 - Tahap 2 (Materi A: SPL 3 variabel)
+======================================================================
+Tujuan : Minta bahan lengkap untuk materi Sistem Persamaan Linear 3 variabel.
+ 
+Isi prompt (ditulis ulang):
+  "Lanjut ke tahap 2."
+  (Tahap 2 yang sudah kutulis di rencana awal: pilih satu metode antara Eliminasi Gauss atau
+  Gauss-Jordan beserta alasan singkatnya, tulis algoritma langkah demi langkah dengan bahasa
+  sendiri dalam format .txt, buat kode Python untuk Colab yang dibagi per cell dengan judul
+  markdown, buat versi yang sama dengan komentar penjelasan detail, lalu sarankan nama file
+  untuk repo. Contoh SPL harus unik.)
+ 
+Hasil yang kudapat:
+  Metode Gauss-Jordan dengan pivot parsial; file algoritma_spl_gauss_jordan.txt; notebook
+  spl_gauss_jordan.ipynb (versi ringkas) dan spl_gauss_jordan_penjelasan.ipynb (versi
+  penjelasan detail) yang berisi 9 cell, termasuk uji kasus tanpa solusi tunggal dan uji
+  acak yang dibandingkan dengan NumPy.
+ 
+Yang kukerjakan sendiri:
+  (isi: misalnya "mengunggah notebook ke Colab, menjalankan semua cell, mengubah angka SPL
+  contoh, membaca ulang penjelasannya sampai paham")
+ 
+======================================================================
+PROMPT 3 - Tahap 3 (Materi B: Bisection)
+======================================================================
+Tujuan : Minta bahan lengkap untuk materi Persamaan Non Linear metode Bisection.
+ 
+Isi prompt (ditulis ulang):
+  "Lanjut ke tahap 3."
+  (Tahap 3 yang sudah kutulis di rencana awal: sama dengan tahap 2 tetapi untuk metode
+  Bisection, dengan fungsi uji yang unik, toleransi, batas iterasi, tabel iterasi, dan
+  pemeriksaan apakah f(a) x f(b) < 0.)
+ 
+Hasil yang kudapat:
+  File algoritma_bisection.txt; notebook bisection.ipynb dan bisection_penjelasan.ipynb
+  (masing-masing 9 cell) dengan fungsi uji f(x) = x^3 - 7x + 2 sin(x) - 1,7, selang [2, 4],
+  toleransi 0,000001, tabel 21 putaran, perbandingan dengan SciPy, uji selang yang salah, dan
+  grafik.
+ 
+Yang kukerjakan sendiri:
+  (isi: misalnya "menjalankan semua cell di Colab, mencoba mengganti fungsi dan selang,
+  memahami kenapa jumlah putarannya 21")
+ 
+======================================================================
+PROMPT 4 - Tahap 4 (isi file log prompt)
+======================================================================
+Tujuan : Menyusun file prompt_ai.txt ini.
+ 
+Isi prompt (ditulis ulang):
+  "Lanjut ke tahap 4."
+  (Tahap 4 yang sudah kutulis di rencana awal: susun isi file prompt_ai.txt dari semua
+  prompt yang kupakai di sesi ini, ditulis ulang dengan bahasaku sendiri dan tidak persis
+  sama.)
+ 
+Hasil yang kudapat:
+  File prompt_ai.txt yang sedang kamu baca ini.
+ 
+Yang kukerjakan sendiri:
+  (isi: misalnya "memeriksa bahwa isi log sesuai dengan prompt yang kupakai")
+ 
+======================================================================
+(Entri berikutnya ditambahkan setelah tahap 5 dan tahap 6 dikerjakan.)
+======================================================================
