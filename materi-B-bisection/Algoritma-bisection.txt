@@ -1,0 +1,57 @@
+ALGORITMA METODE BISECTION (BELAH DUA) UNTUK PERSAMAAN NON LINEAR
+Nama   : Mufid Rosidi
+NIM    : 202511420044
+Materi : Komputasi Numerik - Persamaan Non Linear, metode Bisection
+ 
+IDE DASAR
+Kalau sebuah fungsi kontinu bernilai negatif di satu ujung selang dan positif di ujung lainnya,
+pasti ada titik di dalam selang itu yang nilainya tepat nol (akar). Aku belah selang itu jadi
+dua bagian sama panjang, lalu kupilih bagian yang masih "berganti tanda", dan kuulangi sampai
+selangnya cukup sempit. Titik tengah selang terakhir adalah taksiran akarnya.
+ 
+MASUKAN
+- fungsi f(x)       : persamaan yang dicari akarnya, bentuknya f(x) = 0
+- kiri, kanan       : ujung selang awal
+- ambang_galat      : toleransi, yaitu batas galat yang boleh diterima
+- jatah_putaran     : batas maksimal iterasi supaya program tidak berputar tanpa henti
+ 
+KELUARAN
+- taksiran akar, tabel iterasi, dan status apakah toleransi tercapai
+ 
+LANGKAH-LANGKAH
+1.  Hitung f(kiri) dan f(kanan).
+2.  Periksa syarat: apakah f(kiri) x f(kanan) < 0 (berbeda tanda)?
+      - Kalau tidak, berhenti dan tulis pesan "selang tidak mengapit akar".
+      - Kalau ya, lanjut.
+3.  Mulai putaran ke-1.
+4.  Hitung titik tengah: tengah = (kiri + kanan) / 2.
+5.  Hitung f(tengah).
+6.  Hitung batas galat = (kanan - kiri) / 2, lalu catat satu baris tabel:
+    putaran, kiri, kanan, tengah, f(kiri), f(tengah), batas galat.
+7.  Cek berhenti:
+      - Kalau f(tengah) = 0 atau batas galat < ambang_galat, berhenti. Taksiran akar = tengah.
+8.  Kalau belum berhenti, tentukan separuh selang yang dipertahankan:
+      - Kalau f(kiri) x f(tengah) < 0, akar ada di separuh kiri, jadi kanan <- tengah.
+      - Kalau tidak, akar ada di separuh kanan, jadi kiri <- tengah dan f(kiri) <- f(tengah).
+9.  Naikkan nomor putaran. Kalau sudah melewati jatah_putaran, berhenti dan beri peringatan
+    bahwa toleransi belum tercapai. Kalau belum, kembali ke langkah 4.
+10. Periksa hasil: nilai f(taksiran akar) harus mendekati 0.
+ 
+PERKIRAAN JUMLAH PUTARAN
+Lebar selang selalu jadi setengahnya tiap putaran. Program berhenti saat
+(lebar awal) / 2^k < ambang_galat, sehingga
+      k = lantai( log2( lebar_awal / ambang_galat ) ) + 1
+ 
+CONTOH SOAL YANG KUPAKAI (fungsi kususun sendiri)
+      f(x) = x^3 - 7x + 2 sin(x) - 1,7
+      selang awal [2, 4], toleransi 0,000001, jatah putaran 60
+      f(2) = -5,881405 dan f(4) = 32,786395 (beda tanda, jadi syarat terpenuhi)
+Hasil: akar sekitar 2,704751 setelah 21 putaran (sesuai perkiraan teori).
+ 
+CATATAN
+- Bisection pasti konvergen kalau syarat beda tanda terpenuhi, tetapi lajunya lambat
+  (galat hanya mengecil separuh tiap putaran).
+- Kalau di dalam selang ada beberapa akar, bisection hanya menemukan salah satunya.
+- Kalau f(kiri) dan f(kanan) bertanda sama, bukan berarti pasti tidak ada akar. Bisa saja
+  ada dua akar di dalam selang. Jadi selang perlu dipilih dengan melihat grafik.
+ 
