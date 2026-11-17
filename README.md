@@ -11,7 +11,7 @@ Nama: Mufid Rosidi
 | `video/` | Video penjelasan (maks. 5 menit) |
 
 ## Buka di Google Colab
-- Materi A: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME-KAMU/Komputasi-Numerik/blob/main/materi-A-spl/spl_gauss_jordan.ipynb)
+- Materi A: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1g27_CI-YeikhUFUPHScIRNkV27G0tev4?usp=sharing)
 - Materi B: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME-KAMU/Komputasi-Numerik/blob/main/materi-B-bisection/bisection.ipynb)
 
 ## Cara menjalankan
