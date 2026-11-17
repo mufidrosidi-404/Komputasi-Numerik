@@ -12,7 +12,7 @@ Nama: Mufid Rosidi
 
 ## Buka di Google Colab
 - Materi A: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1g27_CI-YeikhUFUPHScIRNkV27G0tev4?usp=sharing)
-- Materi B: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME-KAMU/Komputasi-Numerik/blob/main/materi-B-bisection/bisection.ipynb)
+- Materi B: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11lLtIO3l2mWQXWTUDb3O1sahgeUuV6gc?usp=sharing)
 
 ## Cara menjalankan
 Buka notebook di Colab, lalu jalankan cell dari yang paling atas satu per satu.
